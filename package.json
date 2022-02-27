@@ -1,6 +1,6 @@
 {
   "name": "eremento",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Simple JavaScript HTMLElement Generator",
   "main": "index.js",
   "scripts": {
