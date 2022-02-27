@@ -1,0 +1,22 @@
+{
+  "name": "eremento",
+  "version": "1.0.1",
+  "description": "Simple JavaScript HTMLElement Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hxAri/Eremento.git"
+  },
+  "keywords": [
+    "Eremento"
+  ],
+  "author": "hxari",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hxAri/Eremento/issues"
+  },
+  "homepage": "https://github.com/hxAri/Eremento#readme"
+}
