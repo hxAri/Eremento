@@ -36,7 +36,7 @@ As for how to use it, it's also quite simple without much ado.
 
             // Multiple create element with root.
             Eremento.multiple([ root, [ .... ] ]);
-    }
+    });
 
 </script>
 ```
