@@ -41,6 +41,9 @@ As for how to use it, it's also quite simple without much ado.
 </script>
 ```
 
+# Thanks
+Thanks to [obfuscator.io](https://obfuscator.io/) for obfuscate javascript code for free.
+
 # License
 All source code license under MIT.<br/>
 Please see the MIT documentation for details.
