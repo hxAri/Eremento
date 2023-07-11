@@ -159,7 +159,7 @@
 	};
 	
 	/*
-	 * Arrange or create war html syntax.
+	 * Arrange or create raw html syntax.
 	 *
 	 * @params Array<HTMLElement|Object>|HTMLElement|Object name
 	 * @params Object attributes
@@ -240,7 +240,8 @@
 						}
 					}
 					else {
-						innerHTML += replace( attributes[key] );
+						/** innerHTML += replace( attributes[key] ); **/
+						innerHTML += attributes[key];
 					}
 					continue;
 				}
@@ -289,13 +290,14 @@
 				// If attribute is dataset.
 				if( key.match( /^(?:data|dataset)$/i ) )
 				{
-					// Skip append if dataset is not Object.
-					if( typedef( attributes[key], Object ) === false ) continue;
-					
-					// Append datasets.
-					for( let data in attributes[key] )
+					// Append if dataset is not Object.
+					if( typedef( attributes[key], Object ) )
 					{
-						element.dataset[data] = attributes[key][data];
+						// Append datasets.
+						for( let data in attributes[key] )
+						{
+							element.dataset[data] = attributes[key][data];
+						}
 					}
 					continue;
 				}
@@ -396,7 +398,9 @@
 	return({
 		arrange: arrange,
 		create: create,
+		paired: paired,
 		replace: replace,
-		multiple: multiple
+		multiple: multiple,
+		unpaired: unpaired
 	});
 }));

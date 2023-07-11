@@ -1,22 +1,25 @@
 {
     "name": "eremento",
-    "version": "1.0.5",
+    "author": "hxari",
+    "version": "2.0.0",
+    "license": "MIT",
+    "private": false,
+    "main": "dist/js/eremento.js",
+    "unpkg": "dist/js/eremento.js",
     "description": "Simple JavaScript HTMLElement Generator",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/hxAri/Eremento.git"
     },
     "keywords": [
-        "Eremento"
+        "Eremento",
+        "HTML",
+        "hxAri",
+        "Js"
     ],
-    "author": "hxari",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/hxAri/Eremento/issues"
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "homepage": "https://github.com/hxAri/Eremento#readme"
+    "homepage": "https://github.com/hxAri/Eremento#readme",
+    "bugs": "https://github.com/hxAri/Eremento/issues"
 }

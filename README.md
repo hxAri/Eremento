@@ -1,48 +1,54 @@
+
 ![Eremento · Logo](https://raw.githubusercontent.com/hxAri/hxAri/main/public/images/1653507202%3B5fe1yJwN3F.png)
 
-## About
-Eremento Simple JavaScript HTMLElement Generator. Want to create or build HTML elements with an Array arrangement? But you are confused about making it? Sans **Eremento** is the solution, it is made as simple as possible so that it is easy to use by everyone who needs it.
+Eremento is a tool for building HTML Elements based on objects or properties, you can create HTML element objects and also create raw HTML structures easily with Eremento.
 
-## Usage
-As for how to use it, it's also quite simple without much ado.
+## Features
+* Arrangement<br/>
+  Builds the raw HTML structure from the object as well as from the HTML instance itself.
+* Object<br/>
+  Builds html elements from objects.
+* Multiple<br/>
+  You can construct one element or even more than one html element.
+
+## Initialize
+Through **UNPKG**
 ```html
-<!-- Without being minimized -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/hxAri/Eremento@latest/dist/js/eremento.js"></script>
-
-<!-- With minimized script -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/hxAri/Eremento@latest/dist/js/eremento.min.js"></script>
-
-<!-- Or even with obfuscate -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/hxAri/Eremento@latest/dist/js/eremento.obs.js"></script>
-
-<!-- Application examples -->
-<script type="text/javascript">
-
-    window.addEventListener( "load", function(e)
-    {
-        // Root element target.
-        var root = document.getElementById( "root" );
-
-            // Single create element.
-            root.appendChild( Eremento.create({
-                name: "h1",
-                self: {
-                    innerHTML: "Example Single Element"
-                }
-            });
-
-            // Multiple create element.
-            Eremento.multiple([ .... ]);
-
-            // Multiple create element with root.
-            Eremento.multiple([ root, [ .... ] ]);
-    });
-
-</script>
+<script type="text/javascript" src="https://unpkg.com/eremento/dist/js/eremento.js"></script>
 ```
 
-## Thanks
-Thanks to [obfuscator.io](https://obfuscator.io/) for obfuscate javascript code for free.
+## Examples
+Build raw HTML structure.
+```js
+/** For Multiple Elements **/
+Eremento.arrange([]);
+
+/** For Single Element **/
+Eremento.arrange({
+    name: "input",
+    attributes: {
+        type: "text",
+        value: null
+    }
+});
+
+/** Results **/
+/** <input type="text" value="" /> */
+```
+
+Building an HTML Element Instance.
+
+```js
+Eremento.create({
+    name: "button",
+    attributes: {
+        dataset: {
+            id: 0
+        },
+        click: e => console.log( e.target.dataset.id )
+    }
+});
+```
 
 ## License
-All source code license under MIT. Please see the MIT documentation for details.
+All source code license under [MIT license](https://opensource.org/licenses/MIT). Please [see](https://opensource.org/licenses/MIT) the [MIT](https://opensource.org/licenses/MIT) documentation for details.
